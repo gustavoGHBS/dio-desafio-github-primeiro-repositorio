@@ -1,0 +1,84 @@
+Comandos sistemas operacionais Win x Linux
+
+Windows					Unix
+-cd						-cd     (Usado para acessar tanto avançando como voltando) EX: CD NOME_DA_PASTA ou CD .. para voltar para a pasta anterior
+-dir					-ls		(Usado para listar arquivos que tem no diretório)
+-mkdir					-mkdir  (Usado para criação de uma pasta) EX: MKDIR NOME_DA_PASTA
+-del / rmdir			-rm rf  (Usado para apagar conteudos de uma pasta ou apagar a propria pasta) *DEL apaga o conteudo que tem na pasta
+-echo					-echo	(Usado para criar um arquivo dentro da pasta) EX: ECHO TEXTO_QUALQUER > TEXTO.TXT aqui ele vai criar um arquivo .txt e 
+																				  quando for aberto terá o nome TEXTO_QUALQUER escrito.
+																				  
+																				  
+																				  
+https://docs.microsoft.com/pt-br/windows/wsl/install-manual
+
+
+https://docs.microsoft.com/pt-br/windows/wsl/troubleshooting#installation-issues	
+
+==========================================================================================================================================================================
+INSTALAR GIT NO Linux
+
+Digita:
+1º
+sudo add-apt-repository ppa:git-core/ppa -y
+
+2º
+sudo apt update
+
+3º
+sudo apt install git		
+
+Para ver a versão instalada:
+git --version															  
+
+==========================================================================================================================================================================
+TÓPICOS FUNDAMENTAIS PARA ENTENDER O FUNCIONAMENTO DO GIT
+
+-SHA1 (Secure Hash Algorithm) ou Algoritimo de Hash Seguro.
+	É um conjunto de funções HASH criptográficas projetadas pela NSA (Agência de Segurança Nacional do EUA).
+	Ou seja, o algoritimo vai pegar um arquivo, que pode ser uma frase, foto ... e vai embaralhar ele de uma forma muito especifica.
+	A encriptação gera um conjunto de caracteres identificador de 40 dígitos, esse conjuntos são únicos e serve como identificação. 
+	Se esse arquivo por exemplo for de texto e muito grande o algoritimo quando usado vai gerar a chave identificadora de 40 dígitos, 
+	caso seja alterado uma "virgula" desse texto o algoritimo irá gerar um novo conjunto de 40 dígitos, e se por acaso retirar essa "vírgula"
+	que foi adicionada e colocar novamente o algoritimo para rodar, ele vai vergar o mesmo conjunto identificador que foi gerado inicialmente.
+
+Forma curta de representar um arquivo(Digitando esse comando no terminal):
+1 echo "ola mundo" | openssl sha1
+2 > (stdin)= f9fc856e559b950175f2b7cd7dad61facbe58e7b
+	
+-OBJETOS FUNDAMENTAIS
+-SISTEMA DISTRIBUIDO
+-SEGURANÇA
+
+
+OBJETOS INTERNOS DO GIT
+
+-BLOBS
+-TREES
+-COMMITS
+
+
+==========================================================================================================================================================================
+
+CHAVES SSH E TOKENS
+
+Chaves SSH:
+É uma forma de fazer uma comunicação segura e encriptada, entre nossa maquina e o GitHub. 
+Comando:
+ssh-keygen -t ed25519 -C seuemail@gmail.com
+(esse email é o que voc}e utiliza no GitHub)
+
+==========================================================================================================================================================================
+
+TRABALHANDO COM GitHub
+
+Adicionar email e nickname nos projetos para o GitHub
+
+E-mail:
+git config -- global user.email "seuemail@email.com"
+
+NickName:
+git config -- global user.nickname "SeuNickName"
+
+Trazer a configuração dos dados
+git config --list
